@@ -8,7 +8,9 @@
     "guidelines-copy": "cp media/FederalPLGuidelines.* howto/guidelines/FederalPLGuidelines/",
     "guidelines-mkdir": "mkdir -p howto/guidelines/FederalPLGuidelines/",
     "federalist": "npm run build-js && npm run guidelines",
-    "watch-js": "webpack -w --config --progress --colors"
+    "watch-js": "webpack -w --config --progress --colors",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -28,6 +30,8 @@
     "basscss-sass": "^4.0.0",
     "jquery": "^3.4.1",
     "stickyfilljs": "^2.0.2",
-    "webpack": "^1.13.2"
-  }
+    "webpack": "^1.13.2",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
